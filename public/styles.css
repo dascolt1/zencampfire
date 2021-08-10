@@ -1,0 +1,248 @@
+:root {
+  --gradient: linear-gradient(
+    45deg,
+    #845ec2,
+    #d65db1,
+    #ff6f91,
+    #ff9671,
+    #ffc79f,
+    #f9f871
+  );
+}
+
+body {
+  background-image: var(--gradient);
+  background-size: 400%;
+  min-height: 100vh;
+}
+
+.animate {
+  animation: bg-animation 12s infinite alternate;
+}
+
+#play {
+  display: block;
+}
+
+#pause {
+  display: block;
+}
+
+.pause-button {
+  height: 280px !important;
+  width: 280px !important;
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.song-info .song-title {
+  margin-bottom: -10px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.outer {
+  background-color: black;
+  height: 400px;
+  width: 300px;
+  text-align: center;
+  border-radius: 2%;
+  box-shadow: 7px 5px 5px gray;
+}
+
+.components {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.components .screen {
+  background-image: var(--gradient);
+  width: 280px;
+  height: 180px;
+  margin-top: 10px;
+  border-radius: 2%;
+  animation: bg-animation 5s infinite alternate-reverse;
+  color: white;
+  background-size: 200%;
+}
+
+.components .buttons {
+  background-color: black !important;
+  width: 280px;
+  height: 180px;
+  margin-top: 15px;
+  border-radius: 2%;
+}
+
+#outer-circle {
+  background: #fff;
+  border-radius: 50%;
+  height: 160px;
+  width: 160px;
+  position: relative;
+  margin-left: 55px;
+  margin-top: 10px;
+  /* 
+    Child elements with absolute positioning will be 
+    positioned relative to this div 
+   */
+}
+
+#play-inner-circle {
+  position: absolute;
+  background-image: var(--gradient);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  /*
+    Put top edge and left edge in the center
+   */
+  top: 50%;
+  left: 50%;
+  margin: -30px 0px 0px -30px;
+  /* 
+    Offset the position correctly with
+    minus half of the width and minus half of the height 
+   */
+  color: black;
+}
+
+#pause-inner-circle {
+  position: absolute;
+  background: black;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  /*
+    Put top edge and left edge in the center
+   */
+  top: 50%;
+  left: 50%;
+  margin: -30px 0px 0px -30px;
+  /* 
+    Offset the position correctly with
+    minus half of the width and minus half of the height 
+   */
+  color: gray;
+}
+
+#back {
+  position: absolute;
+  background: transparent;
+  height: 40px;
+  width: 40px;
+  /*
+    Put top edge and left edge in the center
+   */
+  top: 50%;
+  left: 16%;
+  margin: -20px 0px 0px -20px;
+  /* 
+    Offset the position correctly with
+    minus half of the width and minus half of the height 
+   */
+  color: black;
+}
+
+#forward {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  /*
+    Put top edge and left edge in the center
+   */
+  top: 50%;
+  left: 82%;
+  margin: -20px 0px 0px -20px;
+  /* 
+    Offset the position correctly with
+    minus half of the width and minus half of the height 
+   */
+  color: black;
+}
+
+.fas {
+  font-size: 2rem;
+  font-family: sans-serif, 'FontAwesome' !important;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+#message-box {
+  background: black;
+  color: #ff9671;
+  margin-top: 10rem;
+  height: 23rem;
+  width: 40rem;
+  border-radius: 1rem;
+}
+
+#message-bg {
+  background: white;
+  color: black;
+  height: 15rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  overflow: scroll;
+}
+
+#message-box p {
+  text-align: left;
+  font-size: 0.8rem;
+  margin-left: 10px;
+  padding: 0.2rem;
+}
+
+#message-box p:nth-child(odd) {
+  background-color: #ff9671;
+}
+
+#message-box button {
+  background-color: white;
+}
+
+#message-input {
+  margin-bottom: 7px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #message-box {
+    background: black;
+    color: #ff9671;
+    margin-top: 10rem;
+    height: 23rem;
+    width: 80vw;
+    border-radius: 1rem;
+    max-width: 80vw;
+  }
+
+  #message-bg {
+    background: white;
+    color: black;
+    height: 15rem;
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+}
