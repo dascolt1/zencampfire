@@ -4,7 +4,7 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server, { cors: { origin: '*' } });
 const cors = require('cors');
 const path = require('path');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'html');
 
