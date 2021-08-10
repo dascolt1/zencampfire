@@ -245,4 +245,9 @@ body {
     margin: 1rem;
     border-radius: 1rem;
   }
+
+  #forward,
+  #back {
+    font-size: 5rem;
+  }
 }
