@@ -232,16 +232,16 @@ body {
     background: black;
     color: #ff9671;
     margin-top: 10rem;
-    height: 23rem;
-    width: 80vw;
+    height: 33rem;
+    width: 90vw;
     border-radius: 1rem;
-    max-width: 80vw;
+    max-width: 90vw;
   }
 
   #message-bg {
     background: white;
     color: black;
-    height: 15rem;
+    height: 25rem;
     margin: 1rem;
     border-radius: 1rem;
   }
